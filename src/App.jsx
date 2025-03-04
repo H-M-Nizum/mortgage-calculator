@@ -1,15 +1,26 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Navbar from "./components/navbar";
+import { Grid2 } from "@mui/material";
+import Result from "./components/result";
+import SliderSelect from "./components/sliderSelect";
+import Tenure from "./components/tenure";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1>hi</h1>
-      <h1>MortgAge Calculator Project</h1>
+      <Navbar />
+      <Grid2 container spacing={2}>
+        <Grid2 item>
+          <SliderSelect />
+          <Tenure />
+        </Grid2>
+        <Grid2 item>
+          <Result />
+        </Grid2>
+      </Grid2>
     </>
   );
 }
